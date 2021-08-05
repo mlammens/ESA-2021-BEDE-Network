@@ -57,7 +57,7 @@ Timing is approximate.
 * Short Presentation: [Data Science Fundamentals](docs/ESA2019DataScienceFundamentals.pptx)
 * Activity: [Speed Data Science](docs/ESA2019-Speed-Data-Science-Activity.html)
 
-### Concurrent sessions (1 hour 15 minutes)
+### Concurrent sessions (1 hour 45 minutes)
 
 #### Methods and tools for teaching data science in your classroom 
 
