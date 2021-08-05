@@ -20,6 +20,12 @@ The biological and environmental sciences have been rapidly and fundamentally re
 
 ## Facilitators and Helpers
 
+* Dr. Laura Broughton
+* Dr. Olga Calderon
+* Dr. Erika Crispo
+* Dr. Nate Emery
+* Dr. Kelly O'Donnell
+
 ## Logistics
 
 * **Date:** Friday, August 6, 2021
