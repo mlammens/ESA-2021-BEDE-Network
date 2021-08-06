@@ -47,7 +47,7 @@ Timing is approximate.
 ### Introduction to the workshop (30 minutes)
 
 * Participant introductions - via [etherpad](https://etherpad.wikimedia.org/p/ESA-2021-BEDE-Network)
-* [Brief Introduction to BEDE Network: Rationale and Goals](docs/ESA_BEDE_Workshop_Intro.pptx)
+* [Brief Introduction to BEDE Network: Rationale and Goals](https://docs.google.com/presentation/d/1KxAfVy63nmY5nP8GGb5kg-XRA0xqoVny/edit?usp=sharing&ouid=104938329295943550532&rtpof=true&sd=true)
     * Context: The need for data science education in Biology and Environmental Science
     * Method: Backwards Design
     * Rationale: Data science, Inclusivity, and Empowerment
@@ -55,7 +55,7 @@ Timing is approximate.
 
 ### Data science for undergraduate biology and environmental science (30 minutes)
 
-* Short Presentation: [Data Science Fundamentals](docs/ESA2019DataScienceFundamentals.pptx)
+* Short Presentation: [Data Science Fundamentals](https://docs.google.com/presentation/d/1Ejj2wUeb5Fkj_MwdymZ8xBNalNh25IGy/edit?usp=sharing&ouid=104938329295943550532&rtpof=true&sd=true)
 * Activity: [Speed Data Science](docs/ESA2019-Speed-Data-Science-Activity.html)
 
 ### Concurrent sessions (1 hour 45 minutes)
