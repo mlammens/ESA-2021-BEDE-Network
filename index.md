@@ -37,6 +37,7 @@ The biological and environmental sciences have been rapidly and fundamentally re
 ## Important Links
 
 * Collaborative note taking and question answering - [https://etherpad.wikimedia.org/p/ESA-2021-BEDE-Network](https://etherpad.wikimedia.org/p/ESA-2021-BEDE-Network)
+* RMarkdown file for R/RStudio session - [example *.Rmd file](https://github.com/mlammens/ESA-2021-BEDE-Network/blob/d8d70b1f2e560501b02d3305d7c08f834cc0aae0/docs/Using-RMarkdown.Rmd)
 
 
 ## Schedule
