@@ -109,15 +109,49 @@ sqrt(4)
 abs(-5)
 ```
 
+## Documenting your work with R Markdown
+
+Using [R Markdown](https://rmarkdown.rstudio.com/), we can integrate descriptive text, R code, and the output from that code, into a seamless document that can be easily **reproduced**.
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. 
+While some of the details of using Markdown (and thus R Markdown) can get tricky, the basics are very easy to pickup.
+RStudio even comes with two very useful tools to learn and use Markdown. 
+First, go to the `Help` tab and select `Markdown Quick Reference`.
+Second, a more detailed reference can be found in the `Help` -> `Cheatsheets` section.
+
+### Markdown vs R Markdown
+
+R Markdown is a tool that allows you to make a simple text document using the Markdown formatting syntax **with** R code and associated output embedded. 
+
+### Starting with R Markdown
+
+Go to the new file button (upper left corner of the RStudio interface, or `File` -> `New File`) and choose the R Markdown option. 
+A screen will pop-up requesting information such as Title, Author, and Output Format. 
+Give your new doc a title and select **HTML** as the output format.
+A new file that is pre-populated with a bunch of text will open in the `Source` panel.
+
+We will go over each section briefly:
+
+* Header
+* Sections
+* Code Chunks (The code chunk syntax is *very* specific and important. As a beginner, you may choose to use the GUI button to make empty chunks - it's the little green box with a **C** in it and a plus sign.)
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. Click **Knit** now to see what happens.
+
 ## R script file
 
-Use a script file for your work. It's easier to go back to and easy to document.
+Another common file format for documenting your work is an *.R script file.
+Script files are primarily filled with only code and minimal *comments* that you can include to explain that code.
+**Important:** within an R file, you can use the # sign to add comments. 
+Anything written after the # is **not** interpreted when you run the code.
+You can print a script file, but it will print as a simple text file without any formatting.
 
-**Important:** within an R file, you can use the # sign to add comments. Anything written after the # is **not** interpreted when you run the code.
+***
 
 #### Challenge
 
-Create a new R script file in your `scripts` directory.
+In the Rmd file we created above, create a new R chunk and add some math operations. Now `Knit` the new file. 
+
+***
 
 ### Basic file managment in R
 
@@ -134,12 +168,16 @@ setwd(".")
 * Navigating the file path
 * Tab completion of file paths
 * Tab completion of R commands
+* The cheat - `file.choose()`
+
+***
 
 #### Challenge
 
 * Try to auto-complete `fil`, what do you find?
 * Use the brief help menu that comes up to find a function that starts with `file`, and describe what you think it does.
 
+***
 
 ## Variables and objects
 
@@ -227,7 +265,7 @@ v3 <- seq(from = 1, to = 10)
 
 #### Challenge
 
-1. Look up the help for the `seq` function, and use this to make a vector from 1 to 100, by steps of 5.
+1. Look up the help for the `seq` function, and use this to make a vector from 0 to 100, by steps of 5.
 2. Come up with a way that you would use the `length.out` argument.
 
 ***
@@ -273,7 +311,7 @@ soil_data <- read.csv("https://mlammens.github.io/ESA-2021-BEDE-Network/docs/soi
 ```
 
 
-Let's have a brief look at this data set.
+Let's have a brief look at these data.
 
 ```{r}
 head(soil_data)
@@ -386,7 +424,9 @@ used to create a plot is a little more involved than base R (i.e., the `graphics
 
 ### Aside: Installing and loading packages
 
-First, we need to install the `ggplot2` package:
+First, we need to install the `ggplot2` package.
+
+**STOP** did you install the `tidyverse` package?
 
 ```{r installggplot2, eval=FALSE}
 # Only need to do this once
