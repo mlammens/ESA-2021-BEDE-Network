@@ -1,7 +1,8 @@
 ---
+title: "Bringing computational data sciences to your undergraduate ecology classroom"
 layout: page
-title: Bringing computational data sciences to your undergraduate ecology classroom
 tagline: ESA 2021 BEDE Network Workshop
+output: word_document
 description: Simple page for ESA 2021 BEDE Network workshop
 ---
 
@@ -36,6 +37,7 @@ The biological and environmental sciences have been rapidly and fundamentally re
 
 ## Important Links
 
+* Short Course website - [https://mlammens.github.io/ESA-2021-BEDE-Network/](https://mlammens.github.io/ESA-2021-BEDE-Network/)
 * Collaborative note taking and question answering - [https://etherpad.wikimedia.org/p/ESA-2021-BEDE-Network](https://etherpad.wikimedia.org/p/ESA-2021-BEDE-Network)
 * RMarkdown file for R/RStudio session - [example *.Rmd file](https://github.com/mlammens/ESA-2021-BEDE-Network/blob/d8d70b1f2e560501b02d3305d7c08f834cc0aae0/docs/Using-RMarkdown.Rmd?raw=true) (**NOTE** - to download this file you will probably need to right-click and select "Save like as ...")
 
@@ -62,8 +64,8 @@ Timing is approximate.
 
 #### Methods and tools for teaching data science in your classroom 
 
-* **Lesson 1:** [Introduction to R/RStudio for Instructors](docs/ESA2019-Intro-to-RStudio.html)
-* **Lesson 2:** [Using Markdown/RMarkdown in the classroom](docs/ESA2019-Using-RMarkdown.html)
+* **Lesson 1:** [Introduction to R/RStudio for Instructors](docs/Intro-to-RStudio.html)
+* **Lesson 2:** [Using Markdown/RMarkdown in the classroom](docs/Using-RMarkdown.html)
 
 #### Development of data science lessons
 
