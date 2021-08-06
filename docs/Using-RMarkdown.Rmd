@@ -46,7 +46,7 @@ Let's make a chunk to add the soil data set.
 
 
 ```{r soil_data}
-soil_data <- read.csv("https://mlammens.github.io/ESA2019-BEDENet/docs/soil_nutrient_data.csv")
+soil_data <- read.csv("https://mlammens.github.io/ESA-2021-BEDE-Network/docs/soil_nutrient_data.csv")
 ```
 
 You can execute the R code above by either using one of the "Run" functions (look in the upper-right corner of the editor pane), clicking the little green arrow in the upper right corner of the code chunk (note, this will run all code in the chunk), or by pressing CMD + ENTR (Mac) or CNTR + ENTR (Windows) while your cursor is on the line you wish to execute.
@@ -59,6 +59,7 @@ summary(soil_data)
 
 Before we go on, **Knit** your new report.
 
+***
 
 #### Challenge - Calculating mean and standard deviation
 
@@ -70,17 +71,21 @@ At the end of this chunk, you should have calculated **five** different mean and
 mean(soil_data$phosphorus_lbacre[1:5])
 ```
 
+***
 
 #### Challenge - Data visualization
 
 Using what you have learned during our earlier lesson, write code in an R chunk to create a visual summary of these data.
 
 ```{r}
-hist(soil_data$pH, breaks = 10)
+ggplot(data = soil_data, aes(x = site, y = phosphorus_lbacre)) +
+  geom_boxplot()
 ```
 
 
 Once you have completed these two tasks, **Knit** your document.
+
+***
 
 ## Additional Resources
 
@@ -91,14 +96,14 @@ Once you have completed these two tasks, **Knit** your document.
 ## Instructor's Notes
 
 This is a brief introduction to R Markdown documents. 
-The intention is to get students up and running with R Markdown so they can create reproducible data reports in your classroom, however much of their learning about R Markdown will be hands on as they work through assignments.
+The intention is to get students up and running with R Markdown so they can create reproducible assignments in your classroom, however much of their learning about R Markdown will be hands-on as they work through assignments.
 
 ### Learning Outcomes
 
 By the end of this lesson, students should be able to:
 
 * Create a new R Markdown file
-* Successfully **Knit** a document such that the text, code, and output are appropriately formatted.
+* Successfully `knit` a document such that the text, code, and output are appropriately formatted.
 
 ### Assessment
 

@@ -2,7 +2,6 @@
 title: "Introduction to R/RStudio"
 output:
   html_document:
-    code_folding: hide
     toc: yes
 ---
 
@@ -17,12 +16,12 @@ At the end of this session you should be able to:
 
 ## Getting started
 
-For this session, you can either work in RStudio on your own computer (if you have RStudio installed) or you can work in an RStudio Cloud session. 
+For this session, you can either work in RStudio on your own computer (R/RStudio install instructions can be found [here](https://www.rstudio.com/products/rstudio/download/#download)) or you can work in an RStudio Cloud session. 
 To start an RStudio Cloud session go to [https://rstudio.cloud/](https://rstudio.cloud/) and log in using your GitHub account.
 
 ### Difference between R and RStudio
 
-In this session, we will be working primarily in RStudio.
+In this workshop, we will be working primarily in RStudio.
 So what is the difference between R and RStudio?
 R is a programming language (specifically a statistical analysis programming language), while RStudio is an **Integrated Development Environment**, or **IDE**. 
 You can think of it as a interface with R that aids the analyst.
@@ -41,10 +40,10 @@ There are four panels in the RStudio interface (though you may only have three o
 
 Good file management is important in data science. We'll start working on this now.
 
-* Make a `ESA-2019-DataSci` directory / folder
-* Make a `data` directory / folder within `ESA-2019-DataSci`
-* Make a `scripts` directory / folder within `ESA-2019-DataSci`
-* In RStudio, set working directory to your new ``ESA-2019-DataSci`` directory
+* Make a `ESA-2021-DataSci` directory / folder
+* Make a `data` directory / folder within `ESA-2021-DataSci`
+* Make a `scripts` directory / folder within `ESA-2021-DataSci`
+* In RStudio, set working directory to your new ``ESA-2021-DataSci`` directory
 
 #### Setting your working directory
 
@@ -53,16 +52,15 @@ Point-and-click method - Use 'Session' > 'Set Working Directory' > 'Choose Direc
 Using the R Console:
 
 ```{r, eval=FALSE}
-setwd("/Users/maiellolammens/ESA-2019-DataSci/")
+setwd("/Users/maiellolammens/ESA-2021-DataSci/")
 ```
 
 ### Making an R Project
 
-Let's make a new R Project associated with your ESA-2019-DataSci directory. 
-It will become more clear why we are doing this later when we get to the Git lesson.
+Let's make a new R Project associated with your `ESA-2021-DataSci` directory. 
 To make a new project, got to the upper right-hand side of the RStudio interface, where it says **Project: (None)**.
 Click the little downward arrow, select "New Project", then select "Existing Directory" from the window that pops up. 
-Use the graphical user interface (GUI) to navigate to the ESA-2019-DataSci directory, then select "Create Project".
+Use the graphical user interface (GUI) to navigate to the `ESA-2021-DataSci` directory, then select "Create Project".
 
 ### Getting help
 
@@ -98,9 +96,9 @@ There's internal control for order of operations (Please Excuse My Dear Aunt Sal
 3 * 5 + 7
 ```
 
-#### Challenge
-
-Write an example where adding parentheses matters.
+```{r}
+3 * (5 + 7)
+```
 
 ### Internal functions
 
@@ -108,10 +106,7 @@ There are a ton of internal functions, and a lot of add-ons.
 
 ```{r}
 sqrt(4)
-
 abs(-5)
-
-sqrt(-5)
 ```
 
 ## R script file
@@ -130,7 +125,7 @@ Create a new R script file in your `scripts` directory.
 # What working directory am I in?
 getwd()
 
-# Move to a different director?
+# Move to a different directory?
 setwd(".")
 ```
 
@@ -192,6 +187,8 @@ Make a new variable
 my_var_tot <- my_var + my_var2
 ```
 
+***
+
 #### Challenge
 
 Change the value of my_var2
@@ -201,6 +198,8 @@ my_var2 <- 3
 ```
 
 What is the value of `my_var_tot` now?
+
+***
 
 ### Make a vector
 
@@ -224,10 +223,14 @@ v2 <- 1:10
 v3 <- seq(from = 1, to = 10)
 ```
 
+***
+
 #### Challenge
 
 1. Look up the help for the `seq` function, and use this to make a vector from 1 to 100, by steps of 5.
 2. Come up with a way that you would use the `length.out` argument.
+
+***
 
 ## Exploring variable elements
 
@@ -253,88 +256,6 @@ pets[c(1,4)]
 ```
 
 
-## Working with matrices
-
-**Review** - Why might we want 2D data?
-
-Let's make a matrix
-
-#### Challenge
-
-With the people next to you, break down this function, and describe each argument.
-What is the final product?
-
-```{r}
-my_mat <- matrix(data = runif(50), nrow = 10, byrow = TRUE)
-```
-
-What does it mean to fill `byrow`?
-
-```{r}
-matrix(data = 1:9, nrow = 3, byrow = TRUE)
-```
-
-Versus
-
-```{r}
-matrix(data = 1:9, nrow = 3, byrow = FALSE)
-```
-
-#### Challenge
-
-What is the default value for `byrow`?
-
-### Indexing matrices
-
-Indexing happens by **row**, **column** notation.
-
-```{r}
-my_mat <- matrix(data = 1:50, nrow = 10, byrow = TRUE)
-
-my_mat[1,1]
-my_mat[1,2]
-my_mat[2,1]
-
-my_mat[1:4, 1:3]
-
-my_mat[c(1,3,5), ]
-my_mat[ ,c(1,3,5)]
-```
-
-## Combinining internal functions with matrices
-
-Make a "random" matrix (that isn't random in this case because of the `set.seed` function)
-
-```{r}
-set.seed(1)
-mat1 <- matrix(data = runif(50), nrow = 10, byrow = TRUE)
-```
-
-Calculate the mean of all of the data
-
-```{r}
-mean(mat1)
-```
-
-Calculate the standard deviation of all of the data
-
-```{r}
-sd(mat1)
-```
-
-Calculate row means and column means
-
-```{r}
-rowMeans(mat1)
-colMeans(mat1)
-```
-
-Introduce the `apply` function
-
-```{r}
-apply(mat1, MARGIN = 1, mean)
-```
-
 ## Data frames
 
 ### Reading in your own data
@@ -344,10 +265,11 @@ You can read in Excel files, simple text files, and even files from Google Sheet
 But the easiest type of file to read in is a comma separated values (CSV) file. 
 You can save an Excel workbook (or Numbers workbook or Google Sheet) as a CSV file by using the "Save as ..." menu item. 
 
-Let's read in the soil data from our Speed Data Science activity.
+Let's read in the soil data from our Speed Data Science activity using the function `read.csv`.
+Note that in this example, we are reading this file using a URL that points to it, but you can just as easily read in a file on your local system (in fact, this is much more common!).
 
 ```{r soil_data}
-soil_data <- read.csv("https://mlammens.github.io/ESA2019-BEDENet/docs/soil_nutrient_data.csv")
+soil_data <- read.csv("https://mlammens.github.io/ESA-2021-BEDE-Network/docs/soil_nutrient_data.csv")
 ```
 
 
@@ -359,7 +281,7 @@ tail(soil_data)
 ```
 
 As we saw in our previous activity, these data include nutrient measurements at multiple different sites on a suburban campus. 
-The data set also includes information about the data samples were collected and the conditions of the site during collection.
+The data set also includes information about where the data samples were collected and the conditions of the site during collection.
 
 #### `summary` function
 
@@ -375,34 +297,16 @@ When doing data exploration, a few things you want to look at are:
 summary(soil_data)
 ```
 
-#### Aside: Differences between characters and factors
-
-The data type **factors** 'appear' to be similar to characters, but are in fact coded numerically in R. 
-Think of **factors** like **categories**. 
-Here's a quick example that demonstrates the difference in these two variable types that shows up when using `summary`.
-
-```{r}
-## Make a new iris dataset
-soil_data_new <- soil_data
-
-## Create a new column that treats species as a character, rather than a factor
-soil_data_new$site_char <- as.character(soil_data_new$site)
-
-## Run summary command
-summary(soil_data_new)
-```
-
-
-#### Aside: A (very) brief introduction to navigating a `data.frame`
+#### A (very) brief introduction to navigating a `data.frame`
 
 We will be very brief here. 
-I recommend checking out 
+Check out 
 [this Data Carpentry lesson](http://www.datacarpentry.org/R-ecology/03-data-frames.html) for more information.
 
-* Looking at specific `data.frame` elements. Use the *row* and *column* notation.
+* Looking at specific `data.frame` elements. Use *row* and *column* notation.
 
 Here is the 5th row, 3rd column (Site).
-**Note: We are using square brackets to index the `data.frame` and we *always* use row, column notation.**
+**Note: We are using square brackets to index the `data.frame` and we *always* use [row, column] notation.**
 
 ```{r}
 soil_data[5, 3]
@@ -466,30 +370,92 @@ What am I going to get if I execute the command below?
 head(soil_data[c("site","phosphorus_lbacre")])
 ```
 
+***
+
+
 ## Basic data visualization
 
 There are many data visualization tools in R, and a very rich ecosystem of add-on [packages](https://cran.r-project.org/web/packages/index.html) that make it easy to create publication ready figures.
 Here we will learn a few basic visualization tools.
+
+### Visualization using the `ggplot2` package
+
+We are going to introduce a data visualization package called **ggplot2**.
+This package is great for producing publication quality graphics, but the syntax
+used to create a plot is a little more involved than base R (i.e., the `graphics` package).
+
+### Aside: Installing and loading packages
+
+First, we need to install the `ggplot2` package:
+
+```{r installggplot2, eval=FALSE}
+# Only need to do this once
+install.packages("ggplot2")
+```
+
+Then load it:
+
+```{r loadggplot2, message=FALSE}
+library(ggplot2)
+```
+
+**NOTE: You will only have to install a new package once, but you will need to call the `library` function at the beginning of every new R session.**
 
 ### Historgrams
 
 Let's make a histogram of some of the nutrient data
 
 ```{r}
-hist(soil_data$pH, breaks = 10)
+ggplot(data = soil_data, aes(x = pH)) +
+  geom_histogram()
 ```
+
+Let's break down this call to introduce a few key things about ggplot
+
+* ggplot: the initial canvas we're working on
+* geom: geometric objects (i.e. the type of plot - histogram, points, line, etc) 
+* aes: aesthetic mapping 
+
+***
+
+#### Challenge - use `?geom_histogram` to determine how to change the number of bins used
+
+```{r, echo=FALSE, eval=FALSE}
+ggplot(data = soil_data, aes(x = pH)) +
+  geom_histogram(bins = 15)
+```
+
+***
+
+### Scatter plots
 
 Next let's make a scatter plot, showing pH versus phosphorus.
 
 ```{r}
-plot(x = soil_data$pH, y = soil_data$phosphorus_lbacre)
+ggplot(data = soil_data, aes(x = pH, y = phosphorus_lbacre)) +
+  geom_point()
 ```
 
-Lastly, let's make a box plot. **Note that the syntax of our function call is a bit different than above.** 
-Here we are using the `~` to say "make phosphorus a function of site".
+**THAT SEEMS SO COMPLICATED!**
+
+It's true. The syntax for ggplot can seem pretty complicated. 
+But the power of ggplot lies in the ability to lay several geometries (geoms) over each other.
+Also, each geometry has a rich set of options. 
+For example, let's say I want to create the plot we just made, but I want to jitter the points (so they aren't overlapping) and add a trend line.
 
 ```{r}
-boxplot(soil_data$phosphorus_lbacre ~ soil_data$site)
+ggplot(data = soil_data, aes(x = pH, y = phosphorus_lbacre)) +
+  geom_point(position = "jitter") +
+  geom_smooth(method = "lm")
+```
+
+### Boxplots
+
+Lastly, let's make a box plot. 
+
+```{r}
+ggplot(data = soil_data, aes(x = site, y = phosphorus_lbacre)) +
+  geom_boxplot()
 ```
 
 ***
