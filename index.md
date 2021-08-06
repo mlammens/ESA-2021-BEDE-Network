@@ -56,7 +56,7 @@ Timing is approximate.
 ### Data science for undergraduate biology and environmental science (30 minutes)
 
 * Short Presentation: [Data Science Fundamentals](https://docs.google.com/presentation/d/1Ejj2wUeb5Fkj_MwdymZ8xBNalNh25IGy/edit?usp=sharing&ouid=104938329295943550532&rtpof=true&sd=true)
-* Activity: [Speed Data Science](docs/ESA2019-Speed-Data-Science-Activity.html)
+* Activity: [Speed Data Science](docs/Speed-Data-Science-Activity.html)
 
 ### Concurrent sessions (1 hour 45 minutes)
 
