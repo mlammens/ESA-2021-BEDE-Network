@@ -37,7 +37,7 @@ The biological and environmental sciences have been rapidly and fundamentally re
 ## Important Links
 
 * Collaborative note taking and question answering - [https://etherpad.wikimedia.org/p/ESA-2021-BEDE-Network](https://etherpad.wikimedia.org/p/ESA-2021-BEDE-Network)
-* RMarkdown file for R/RStudio session - [example *.Rmd file](https://github.com/mlammens/ESA-2021-BEDE-Network/blob/d8d70b1f2e560501b02d3305d7c08f834cc0aae0/docs/Using-RMarkdown.Rmd?raw=true)
+* RMarkdown file for R/RStudio session - [example *.Rmd file](https://github.com/mlammens/ESA-2021-BEDE-Network/blob/d8d70b1f2e560501b02d3305d7c08f834cc0aae0/docs/Using-RMarkdown.Rmd?raw=true) (**NOTE** - to download this file you will probably need to right-click and select "Save like as ...")
 
 
 ## Schedule
@@ -67,8 +67,9 @@ Timing is approximate.
 
 #### Development of data science lessons
 
-* Start developing a lesson of your own
-* Individually or in small groups - use the tools you want to practice
+* Intros and background
+* Examples of data science integration and curricula changes [slides]()
+* Collaborative work on data science integration with course lessons [jamboard](https://jamboard.google.com/d/16xPdskoSVi9dua9EA-brtKw9c_hwgS4qhMLNBbTk_WM/edit?usp=sharing)
 
 ### Wrap-up (15 minutes)
 
