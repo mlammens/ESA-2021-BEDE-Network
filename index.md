@@ -2,7 +2,6 @@
 title: "Bringing computational data sciences to your undergraduate ecology classroom"
 layout: page
 tagline: ESA 2021 BEDE Network Workshop
-output: word_document
 description: Simple page for ESA 2021 BEDE Network workshop
 ---
 
